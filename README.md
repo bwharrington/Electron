@@ -1,6 +1,6 @@
-# Electron React TypeScript Application
+# Electron Template React TypeScript Application
 
-A simple desktop application built with Electron, React, and TypeScript.
+This repository is meant to be cloned into a folder with a different name, then delete the git folder and push to a new repo for development.
 
 ## Project Structure
 
@@ -19,6 +19,9 @@ A simple desktop application built with Electron, React, and TypeScript.
 ├── tsconfig.json
 └── webpack.config.js
 ```
+To get all the dependancies installed, run
+
+### `npm install --save-dev`
 
 ## Available Scripts
 
