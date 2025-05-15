@@ -39,6 +39,10 @@ Runs the app in the development mode with hot reloading.
 
 Builds the app for production to the `dist` folder.
 
+### `npm run dist`
+
+Creates a Generate Distribution Executable.
+
 ### `npm run package`
 
 Packages the app for Windows distribution.
