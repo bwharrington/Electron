@@ -19,7 +19,7 @@ This repository is meant to be cloned into a folder with a different name, then 
 ├── tsconfig.json
 └── webpack.config.js
 ```
-To get all the dependancies installed, run
+## To get all the dependancies installed, run
 
 ### `npm install --save-dev`
 
