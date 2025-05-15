@@ -9,7 +9,8 @@
     "dev": "concurrently \"npm run watch\" \"electron .\"",
     "package": "webpack --config webpack.config.js --mode production && electron-builder build --win",
     "package-mac": "webpack --config webpack.config.js --mode production && electron-builder build --mac",
-    "package-linux": "webpack --config webpack.config.js --mode production && electron-builder build --linux"
+    "package-linux": "webpack --config webpack.config.js --mode production && electron-builder build --linux",
+    "dist": "npm run build && electron-builder build --win"
   },
   "keywords": [
     "electron",
@@ -27,7 +28,9 @@
     "css-loader": "^7.1.2",
     "electron": "^36.2.0",
     "electron-builder": "^26.0.12",
+    "electron-icon-builder": "^2.0.1",
     "html-webpack-plugin": "^5.6.3",
+    "jimp": "^1.6.0",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.2",
     "ts-node": "^10.9.2",
@@ -53,13 +56,24 @@
       "output": "release"
     },
     "win": {
-      "target": ["nsis"]
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "assets/icon.png"
     },
     "mac": {
-      "target": ["dmg"]
+      "target": [
+        "dmg"
+      ],
+      "icon": "assets/icon.png"
     },
     "linux": {
-      "target": ["AppImage", "deb"]
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "icon": "assets/icon.png"
     }
   }
 }

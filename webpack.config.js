@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = [
   {
-    mode: 'development',
+    mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     entry: './src/main/main.ts',
     target: 'electron-main',
     module: {
@@ -17,9 +17,8 @@ module.exports = [
       path: path.join(__dirname, 'dist'),
       filename: 'main.js'
     }
-  },
-  {
-    mode: 'development',
+  },  {
+    mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     entry: './src/renderer/index.tsx',
     target: 'electron-renderer',
     devtool: 'source-map',
